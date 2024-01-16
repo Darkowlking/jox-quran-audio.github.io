@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quran Audio Web</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('your-mosque-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            color: #3498db;
+            font-size: 36px;
+            font-family: 'Signika', sans-serif;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        h3 {
+            color: #95a5a6;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #34495e;
+            margin-top: 20px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+        }
+
+        #quran_list {
+            margin-bottom: 50px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .dialogue {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>SHAMI AUDIO QURAN </h1>
+    <h2>Recitation of Surah</h2>
+    <h3>Made by Jowino633</h3>
+
+    <label for="surahOption">Select Surah:</label>
+  
+    <select name="surah" id="surahOption" onchange="changeSource()">
+        <option value="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3">1 - Surat Al-Fatiha</option>
+        <option value="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/002.mp3">2 - Surat Al-Baqarah</option>
+        <option value="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/003.mp3">3 - Surat Ali 'Imran</option>
+        <option value="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/004.mp3">4 - Surat An-Nisa</option>
+        <option value="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/005.mp3">5 - Surat Al-Ma'diah</option>
+    </select>
+  
+    <div id="quran_list">
+        <audio controls autoplay>
+            <source src="https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="dialogue">
+        CREATED BY ELITE CODERS.INC<br>
+        CALL US FOR MORE LIKE THIS🙏
+    </div>
+
+    <script>
+        function changeSource() {
+            var quran_player = document.querySelector("#quran_list audio");
+            var x = document.getElementById("surahOption").value;
+            quran_player.src = x;
+        }
+    </script>
+
+</body>
+</html>
